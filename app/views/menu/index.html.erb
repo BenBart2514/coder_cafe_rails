@@ -1,0 +1,14 @@
+<h1>Menu</h1>
+
+<table>
+    <tr>
+      <th>Item</th>
+      <th>Price</th>
+    </tr>
+    <% @menu.each do |item| %>
+      <tr>
+          <td><%= link_to item.name.capitalize, menu_item_path(item.name) %></td>
+          <td><%= "$%.2f" % item.price %></td>
+      </tr>
+    <% end %>    
+</table>
